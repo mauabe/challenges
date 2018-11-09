@@ -23,7 +23,7 @@ function readLine() {
 }
 
 // Complete the diagonalDifference function below.
-function diagonalDifference(arr) {
+function diagonalDifference(arr, n) {
 
   for(int i = 0, j = n-1; i < n; i++, j--){
     sum1 += a[i][i];
