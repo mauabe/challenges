@@ -22,14 +22,14 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-// Complete the diagonalDifference function below.
-function diagonalDifference(arr, n) {
-
-  for(int i = 0, j = n-1; i < n; i++, j--){
-    sum1 += a[i][i];
-    sum2 += a[j][i];
-    return sum1 - sum2;
-  }
+function diagonalDifference(arr) {
+    let d1 = 0;
+    let d2 = 0;
+        for (let i = 0; i < arr.length; i++){
+            d1 += arr[i][i];
+            d2 += arr[arr.length - 1 - i][i];
+        }
+    return Math.abs(d1 - d2); 
 }
 
 function main() {
