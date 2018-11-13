@@ -19,7 +19,7 @@ function characterFrequency (string) {
   let storage = {};
   let result = [];
 
-  for(let char of string){
+  for(let char of string.toLowerCase()){
     if (storage[char]){
       storage[char]++;
     } else {
@@ -28,15 +28,15 @@ function characterFrequency (string) {
     char++;
   }
   //console.log(storage)
-  
-  for(let key in storage){
+   for(let key in storage){
     result = Object.keys(storage).map(prop => ([prop, storage[prop]]))
   }
-
-
   //console.log(result)
   result.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
+  console.log(result)
   return result;
+
+
   }
 
-console.log(characterFrequency ("mississippi"))
+console.log(characterFrequency ("MissiSSippi"))
