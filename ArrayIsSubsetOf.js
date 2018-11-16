@@ -22,6 +22,10 @@ Array.prototype.isSubsetOf = function(sub) {
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 84e0a77123573d9aba8160c37434acd706d762a4
 console.log(['merge','reset','reset'].isSubsetOf(['reset','merge','add','commit'])) // true
 console.log([ 1, 2, 3, 4 ].isSubsetOf([ 2, 3, 4 ]));
 console.log(['cat', 'dog', 'cow'].isSubsetOf(['dog', 'cow', 'fox', 'cat']));
