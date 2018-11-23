@@ -22,13 +22,20 @@ function readLine() {
 }
 
 function staircase(n) {
-  for(let i = 1; i < n; i++){
-    console.log
-  }
-
+    let space = " ";
+    let hash = "#";
+    for(let i = 1; i <= n; i++){
+        console.log(space.repeat(n-i) + hash.repeat(i))
+    }
 }
 
 function main() {
     const n = parseInt(readLine(), 10);
     staircase(n);
 }
+
+//console.log(staircase(4)) 
+//   #
+//  ##
+// ###
+//####
