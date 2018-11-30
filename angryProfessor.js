@@ -18,8 +18,20 @@ function readLine() {
 }
 
 function angryProfessor(k, a) {
+  let classCancelled = true;
+  const storage = { count: 0 };
 
+  for (let i = 0; i < a.length; i++) {
+      if (a[i] <= 0) { storage.count += 1; }
+  }
 
+  if (storage.count >= k) { classCancelled = false; }
+  const classCancelation = function (x) {
+      if (x === false) { return "NO" }
+      else if (x === true) { return "YES" }
+  }
+
+  return classCancelation(classCancelled)
 }
 
 function main() {
@@ -35,3 +47,6 @@ function main() {
     }
     ws.end();
 }
+
+console.log(angryProfessor(3, [-1, -3, 4, 2, 7, 3]))  //YES
+console.log(angryProfessor(3, [-1, -3, 0, -2, , 1, 3, 9, 12, 2])) //NO
