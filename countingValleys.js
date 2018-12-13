@@ -18,7 +18,16 @@ function readLine() {
 }
 
 function countingValleys(n, s) {
-
+    let level = 0;
+    let valleys = 0;
+    let slopes = s.split("\n", 2)[1];
+    for (var i in slopes) {
+        level = (slopes.charAt(i) === 'U') ? level + 1 : level - 1;   
+        if (level === 0 && slopes.charAt(i) === 'U') {              
+            valleys += 1;                                  
+        }
+    }
+    console.log(valleys);
 
 }
 
