@@ -29,4 +29,4 @@ function main() {
     miniMaxSum(arr);
 }
 
-miniMaxSum([1,2,3,4,5])
+console.log(miniMaxSum([1,2,3,4,5]));
