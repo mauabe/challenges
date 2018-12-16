@@ -1,7 +1,7 @@
 'use strict';
 const fs = require('fs');
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding('ascii');
 let inputString = '';
 let currentLine = 0;
 process.stdin.on('data', inputStdin => {
@@ -18,7 +18,12 @@ function readLine() {
 }
 
 function designerPdfViewer(h, word) {
-
+  let maxHeight = 1;
+  for (let letter of word) {
+    maxHeight = Math.max(maxHeight, h[letter.charCodeAt(0) - 97]);
+    if (maxHeight === 7) break;
+  }
+  console.log(word.length * maxHeight);
 }
 
 function main() {
@@ -29,3 +34,5 @@ function main() {
     ws.write(result + "\n");
     ws.end();
 }
+
+console.log(designerPdfViewer([1,3,1], abc));
